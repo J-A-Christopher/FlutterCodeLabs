@@ -1,5 +1,6 @@
 import 'package:codelabone_app/widgets/app_header.dart';
 import 'package:codelabone_app/widgets/app_search.dart';
+import 'package:codelabone_app/widgets/mount_widget.dart';
 import 'package:flutter/material.dart';
 
 const Color mainColor = Color(0xFFFF5656);
@@ -49,7 +50,11 @@ class MountsApp extends StatelessWidget {
         ),
         body: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [AppHeader(), AppSearch()],
+          children: [
+            AppHeader(),
+            AppSearch(),
+            Expanded(child: AppMountListView())
+          ],
         ));
   }
 }
